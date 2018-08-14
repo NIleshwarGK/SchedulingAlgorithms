@@ -1,0 +1,10 @@
+templates/*
+.orogen/*
+*~
+.*.swp
+*.kdev4
+.kdev4/*
+build/*
+
+*autobuild-stamp
+
