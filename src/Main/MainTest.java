@@ -16,11 +16,11 @@ public class MainTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Job J1 = new Job("J1", 2, 1, 4, 1);
-		Job J2 = new Job("J2", 4, 0, 6, 1);
-		Job J3 = new Job("J3", 3, 2, 5, 1);
-		Job J4 = new Job("J4", 5, 2, 8, 1);
-		Job J5 = new Job("J5", 3, 1, 4, 1);
+		Job J1 = new Job("J1", 3, 3, 6, 1);
+		Job J2 = new Job("J2", 2, 2, 7, 1);
+		Job J3 = new Job("J3", 5, 0, 10, 1);
+		Job J4 = new Job("J3", 5, 11, 18, 1);
+		
 		
 		LinkedList<Job> jobList = new LinkedList<Job>();
 		
@@ -28,7 +28,6 @@ public class MainTest {
 		jobList.add(J2);
 		jobList.add(J3);
 		jobList.add(J4);
-		jobList.add(J5);
 		
 		Machine machine = new Machine("M1");
 		
@@ -39,7 +38,7 @@ public class MainTest {
 		algVar.runAlgorithm(jobList, machine);
 		
 		for(int j=0; j<machine.getMachineSchedule().size(); j++) {
-			System.out.println(machine.getMachineSchedule().get(j).getJobElement().getJobID());
+			System.out.println(machine.getMachineSchedule().get(j).getJobElement().getJobID() +" : "+ machine.getMachineSchedule().get(j).getStartingTime() + "-" + machine.getMachineSchedule().get(j).getCompletionTime() + " <prmp = " + machine.getMachineSchedule().get(j).getPreemptionStatus() + ">");
 		}
 
 	}
